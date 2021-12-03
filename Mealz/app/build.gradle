@@ -72,6 +72,9 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
 
+    // Coil
+    implementation "io.coil-kt:coil-compose:1.4.0"
+    
     // OkHttp Logging
     def okHttp_version = '4.9.1'
     implementation "com.squareup.okhttp3:logging-interceptor:$okHttp_version"
