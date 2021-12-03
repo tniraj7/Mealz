@@ -5,8 +5,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-
-object GetMealCategoriesService {
+class GetMealCategoriesService {
 
     private val BASE_URL = "https://www.themealdb.com/api/json/v1/1/"
 
