@@ -22,21 +22,22 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.rememberImagePainter
 import com.nirajtiwari.composepractise.model.Category
 import com.nirajtiwari.composepractise.ui.theme.ComposePractiseTheme
+import javax.security.auth.callback.Callback
 
 @Composable
-fun MealsCategoriesScreen(name: String) {
+fun MealsCategoriesScreen(navigationCallback: (String) -> Unit) {
     val viewModel: MealsCategoryViewModel = viewModel()
     val meals = viewModel.mealsState.value
     LazyColumn(
         contentPadding = PaddingValues(16.dp)
     ) {
         items(meals) { meal ->
-            MealCategory(meal = meal)
+            MealCategory(meal = meal, navigationCallback)
         }
     }
 }
 @Composable
-fun MealCategory(meal: Category) {
+fun MealCategory(meal: Category, navigationCallback: (String) -> Unit) {
 
     var isExpanded by remember { mutableStateOf(false) }
 
@@ -44,6 +45,9 @@ fun MealCategory(meal: Category) {
         shape = RoundedCornerShape(8.dp),
         elevation = 2.dp,
         modifier = Modifier.fillMaxWidth().padding(top = 16.dp)
+            .clickable {
+                navigationCallback(meal.id)
+            }
     ) {
         Row(modifier = Modifier.animateContentSize()) {
 
@@ -91,6 +95,6 @@ fun MealCategory(meal: Category) {
 @Composable
 fun DefaultPreview() {
     ComposePractiseTheme {
-        MealsCategoriesScreen("Android")
+        MealsCategoriesScreen({})
     }
 }
