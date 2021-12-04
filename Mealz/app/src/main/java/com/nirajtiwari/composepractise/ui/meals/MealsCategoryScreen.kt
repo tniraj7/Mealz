@@ -22,7 +22,6 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.rememberImagePainter
 import com.nirajtiwari.composepractise.model.Category
 import com.nirajtiwari.composepractise.ui.theme.ComposePractiseTheme
-import javax.security.auth.callback.Callback
 
 @Composable
 fun MealsCategoriesScreen(navigationCallback: (String) -> Unit) {
