@@ -1,10 +1,18 @@
 package com.nirajtiwari.composepractise.model
 
+import com.nirajtiwari.composepractise.di.DaggerDependencyComponent
 import com.nirajtiwari.composepractise.network.GetMealCategoriesService
+import javax.inject.Inject
 
-class MealsRepository(private val service: GetMealCategoriesService = GetMealCategoriesService()) {
+class MealsRepository {
 
+    @Inject
+    lateinit var service: GetMealCategoriesService
     private var cachedMeals = listOf<Category>()
+
+    init {
+        DaggerDependencyComponent.create().inject(this)
+    }
 
     companion object {
         @Volatile
