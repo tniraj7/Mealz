@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -79,6 +80,11 @@ dependencies {
     // OkHttp Logging
     def okHttp_version = '4.9.1'
     implementation "com.squareup.okhttp3:logging-interceptor:$okHttp_version"
+
+    // Dagger
+    def dagger_version = "2.40"
+    implementation "com.google.dagger:dagger:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
