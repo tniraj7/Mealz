@@ -26,15 +26,15 @@ class MealsCategoryViewModelTest {
         MockitoAnnotations.initMocks(this)
     }
 
-    @ExperimentalCoroutinesApi
-    @Test
-    fun getMealsSuccess() = runBlockingTest {
-
-        val meal = Category("1", "a meal", "bla bla bla", "https://a-meal-url.com")
-        val mealsList = arrayListOf(meal)
-
-        `when`(repository.getMeals()?.categories).thenReturn(mealsList)
-
-        Assert.assertEquals(1, mealsCategoryViewModel.repository.getMeals()?.categories?.size)
-    }
+//    @ExperimentalCoroutinesApi
+//    @Test
+//    fun getMealsSuccess() = runBlockingTest {
+//
+//        val meal = Category("1", "a meal", "bla bla bla", "https://a-meal-url.com")
+//        val mealsList = arrayListOf(meal)
+//
+//        `when`(repository.getMeals()?.categories).thenReturn(mealsList)
+//
+//        Assert.assertEquals(1, mealsCategoryViewModel.repository.getMeals()?.categories?.size)
+//    }
 }
