@@ -8,9 +8,6 @@ import javax.inject.Inject
 class GetMealCategoriesService {
 
     @Inject
-    lateinit var client: OkHttpClient
-
-    @Inject
     lateinit var api: Retrofit
 
     init {
