@@ -38,14 +38,8 @@ captures/
 
 # IntelliJ
 *.iml
-./Mealz/.idea/*
-.idea/
-.idea/workspace.xml
-.idea/tasks.xml
-.idea/gradle.xml
-.idea/assetWizardSettings.xml
-.idea/dictionaries
-.idea/libraries
+.Mealz/.idea/*
+
 # Android Studio 3 in .gitignore file.
 .idea/caches
 .idea/modules.xml
