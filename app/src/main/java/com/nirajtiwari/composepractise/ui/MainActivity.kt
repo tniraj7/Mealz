@@ -16,6 +16,9 @@ import com.nirajtiwari.composepractise.ui.meals.MealsCategoriesScreen
 import com.nirajtiwari.composepractise.ui.mealsdetails.MealDetailsScreen
 import com.nirajtiwari.composepractise.ui.mealsdetails.MealDetailsViewModel
 import com.nirajtiwari.composepractise.ui.theme.ComposePractiseTheme
+import com.microsoft.appcenter.crashes.Crashes
+import com.microsoft.appcenter.analytics.Analytics
+import com.microsoft.appcenter.AppCenter
 
 class MainActivity : ComponentActivity() {
 
@@ -28,6 +31,10 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+        AppCenter.start(
+            application, "b6c94920-e4b0-4921-846c-df7e784d25a4",
+            Analytics::class.java, Crashes::class.java
+        )
     }
 }
 
