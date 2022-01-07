@@ -1,7 +1,6 @@
 package com.nirajtiwari.composepractise.network
 
 import com.nirajtiwari.composepractise.di.DaggerDependencyComponent
-import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import javax.inject.Inject
 
